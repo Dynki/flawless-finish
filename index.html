@@ -15,23 +15,55 @@
 
 <body>
   <section class="hero">
-    <header class="hero__header">
-      <div class="brand">
-        <div class="logo"></div>
-        <div class="text">Flawless Finish</div>
-      </div>
-      <div class="menu">
-        <div class="menu__btn">Services</div>
-        <div class="menu__btn">About</div>
-        <div class="menu__btn">Contact Us</div>
-      </div>
-    </header>
+    <div class="background-wrapper">
+        <img src="./src/assets/bg.jpg">
+        <header class="hero__header">
+          <div class="brand">
+            <div class="text">Flawless Finish</div>
+          </div>
+          <div class="menu">
+            <div class="menu__btn">Services</div>
+            <div class="menu__btn">About</div>
+            <div class="menu__btn">Contact Us</div>
+          </div>
+        </header>
+    </div>
   </section>
-  <section>
-    <h1>Content</h1>
-  </section>
-  <script src="dist/bundle.js"></script>
 
+  <section class="services">
+    <div class="services__wrapper"> 
+      <div class="service">Brows</div>
+      <div class="service">Lips</div>
+      <div class="service">Fillers</div>
+      <div class="service">Botox</div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h1>Brow overview</h1>
+    <div class="content__img">
+  </section>
+
+  <section class="aftercare">
+    <div class="aftercare__img"></div>
+
+    <h1>After Care</h1>
+  </section>
+
+  <section class="contact">
+    <h1>How to find us</h1>
+    <div class="mapouter">
+      <div class="gmap_canvas"><iframe id="gmap_canvas"
+          src="https://maps.google.com/maps?q=15%20Besom%20Way&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+          scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+  </section>
+
+  <script src="dist/bundle.js"></script>
 </body>
 
 </html>

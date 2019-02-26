@@ -6,10 +6,10 @@
   <meta charset="utf-8">
 
   <title>We are flawless</title>
-  <meta name="description" content="West Midlands - Software development services">
+  <meta name="description" content="Cannock - Asthetics clinic, semi-permanent makeup">
   <meta name="author" content="Dean Selvey">
   <meta name="viewport" content="width=device-width">
-  
+
   <link rel="stylesheet" href="dist/main.css">
 
 </head>
@@ -18,11 +18,11 @@
   <section class="hero">
     <header class="hero__header">
       <div class="brand">
-        <div class="text">We Are Flawless</div>
+        <div class="text" id="company-name">We Are Flawless</div>
       </div>
       <div class="menu">
-        <div class="menu__btn">Services</div>
-        <div class="menu__btn">About</div>
+        <button class="menu__btn" id="btn-services" aria-label="Go to services section">Services</button>
+        <button class="menu__btn" id="btn-about" aria-label="Go to find us section">Find Us</button>
         <div class="menu__btn">01922 456 952</div>
       </div>
     </header>
@@ -41,34 +41,78 @@
   </section>
 
   <section class="subhead">
-    <div class="subhead__btn">View our Services</div>
-    <div class="subhead__btn">Ask Questions</div>
-    <div class="subhead__btn">Book an appointment</div>
+    <button class="subhead__btn" id="sh-services-btn">View our Services</button>
+    <button class="subhead__btn">Ask Questions</button>
+    <button class="subhead__btn">Book an Appointment</button>
   </section>
 
-  <section class="services">
+  <section class="services" id="services-section">
+    <div class="services__head">Our Services</div>
+    <div class="services__subhead">We offer a range of Asthetic and Micro Pigmentation services</div>
     <div class="services__wrapper"> 
       <div class="services__sp">
           <img src="./src/assets/sp1.jpg">
+          <div class="services__treat-head">Micro Pigmentation</div>
+          <div class="services__treat-subhead">Give your lips and brows that wow factor with our range of semi-permanent make up services</div>
+          <div class="services__btn" id="mp-btn">
+              Find out more
+          </div>
       </div>
-      <div class="services__ast">
+      <div class="services__sp">
           <img src="./src/assets/ast1.jpg">
+          <div class="services__treat-head">Asthetics</div>
+          <div class="services__treat-subhead">Whether it's fillers or botox we have an asthetic service to suit</div>
+          <div class="services__btn">
+              Find out more
+          </div>
       </div>
     </div>
   </section>
 
-  <section class="content">
-    <h1>Brow overview</h1>
-    <div class="content__img">
+  <section class="content" id="sm-section">
+      <div class="content__head">Semi Permanent Makeup Services</div>
+      <div class="content__subhead">Our range of Micro Pigmentation services give you the look you desire</div>
+      <div class="content__wrapper"> 
+        <div class="content__sp">
+            <img src="./src/assets/brow.jpg">
+            <div class="content__treat-head">Brow Services</div>
+            <ul class="content__price-list">
+              <li>
+                  <div class="content__price-list__item">
+                    <div>Semi Permanent</div>
+                    <div>£350</div>
+                  </div>
+              </li>
+              <li>
+                  <div class="content__price-list__item">
+                      <div>Powder Brow</div>
+                      <div>£250</div>
+                  </div>
+              </li>
+            </ul>
+        </div>
+        <div class="content__sp">
+            <img src="./src/assets/lips.jpg">
+            <div class="content__treat-head">Lip Services</div>
+            <ul class="content__price-list">
+                <li>
+                    <div class="content__price-list__item">
+                      <div>Semi Permanent - Lips</div>
+                      <div>£350</div>
+                    </div>
+                </li>
+              </ul>
+          </div>
+      </div>
   </section>
 
-  <section class="aftercare">
+  <!-- <section class="aftercare">
     <div class="aftercare__img"></div>
 
     <h1>After Care</h1>
-  </section>
+  </section> -->
 
-  <section class="contact">
+  <!-- <section class="contact">
     <h1>How to find us</h1>
     <div class="mapouter">
       <div class="gmap_canvas"><iframe id="gmap_canvas"
@@ -76,9 +120,14 @@
           scrolling="no" marginheight="0" marginwidth="0"></iframe>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="footer">
+    <div class="footer__credit">
+      Made with 
+      <img draggable="false" class="footer__emoji" alt="❤" src="https://s.w.org/images/core/emoji/11/svg/2764.svg">
+      by Dynki Limited 2019 &copy
+    </div>
   </section>
 
   <script src="dist/bundle.js"></script>

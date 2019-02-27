@@ -13,6 +13,12 @@ $("#sh-services-btn").click(function() {
         'slow');
 });
 
+$("#small-services-btn").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#services-section").offset().top},
+        'slow');
+});
+
 $("#mp-btn").click(function() {
     $('html,body').animate({
         scrollTop: $("#sm-section").offset().top},

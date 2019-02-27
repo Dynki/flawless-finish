@@ -5,41 +5,115 @@
 @import './angle.scss';
 
 
-$break-small: 595px;
+$break-small: 856px;
+$break-med: 1366px;
 $break-large: 1200px;
 
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
-    // display: grid;
-    // grid-template-rows: minmax(500px, 60vh) 70px 700px 700px 700px 700px 100px;
     display: flex;
     flex-direction: column;
 
-    // @media screen and (max-width: $break-small) {
-    //     // grid-template-rows: minmax(220px, 40vh) 70px 700px 700px 700px 700px 100px;
-    //     grid-template-rows: repeat(auto-fit);
-    // }
-
-    // grid-template-areas: "hero"
-    //                      "subhead"
-    //                      "content"
-    //                      "services"
-    //                      "aftercare"
-    //                      "contact"
-    //                      "footer"
 }
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: #8B7880;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out 50ms;
+
+    &:hover {
+
+    }
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle:checked ~ nav {
+    // display: block;
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 1.5em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+    
+
+@media screen and (min-width: $break-small) {
+    .nav-toggle-label {
+        display: none;
+    }
+}
+
 
 .hero {
     display: flex;
     flex-direction: column;
-
-    // background-image: url('../assets/bg.jpg');
-    // background-attachment: fixed;
-    // background-repeat: no-repeat;
-    // background-size: 100% 100%;
-    // min-height: 473px;
-
 
     .background-wrapper {
         height: 100%;
@@ -61,33 +135,49 @@ body {
 
         &__text {
             position: absolute;
-            top: 150px;
-            left: 100px;
+            top: 70px;
+            left: 70px;
             font-family: 'Raleway';
             font-size: 30px;
+            width: 370px;
+
 
             @media screen and (max-width: $break-small) {
                 display: none;
+            }
+
+            @media screen and (min-width: $break-med) {
+                width: auto;
+                left: 100px;
+                top: 150px;
             }
         }
 
         &__sub-text {
             position: absolute;
-            top: 200px;
-            left: 100px;
+            top: 150px;
+            left: 70px;
             font-family: 'Raleway';
             font-size: 22px;
+            width: 320px;
 
             @media screen and (max-width: $break-small) {
                 display: none;
             }
+
+            @media screen and (min-width: $break-med) {
+                top: 200px;
+                left: 100px;
+                width: auto;
+            }
+
         }
 
         &__btn {
             position: absolute;
             font-family: 'Raleway';
-            top: 250px;
-            left: 100px;
+            top: 230px;
+            left: 70px;
             background-color: #8B7880;
             color: #ffffff;
             width: auto;
@@ -106,6 +196,11 @@ body {
             @media screen and (max-width: $break-small) {
                 display: none;
             }
+
+            @media screen and (min-width: $break-med) {
+                top: 250px;
+                left: 100px;
+            }
         }
 
     }    
@@ -118,6 +213,7 @@ body {
         align-items: center;
         min-height: 70px;
         z-index: 1;
+        position: relative;
 
         -webkit-box-shadow: 0px 4px 29px -1px rgba(0,0,0,0.33);
         -moz-box-shadow: 0px 4px 29px -1px rgba(0,0,0,0.33);
@@ -333,6 +429,8 @@ body {
         align-content: center;
         align-items: center;
         justify-content: center;
+
+        display: none;
     }
 
     &__btn {
@@ -371,6 +469,8 @@ body {
     }
 
     &__head {
+        margin: 6px;
+
         font-family: 'Raleway';
         font-size: 35px;
 
